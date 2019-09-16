@@ -7,7 +7,7 @@ from sklearn.feature_extraction import DictVectorizer, FeatureHasher
 from itertools import compress
 
 
-reviews = pd.read_csv("/users/aschams/scratch/Complete_review_df2.csv")
+reviews = pd.read_csv("/users/aschams/scratch/Complete_review_df.csv")
 
 reviews['Review_Num'] = reviews.groupby('business_id_x').cumcount()
 reviews.to_csv("/users/aschams/scratch/Complete_numbered_reviews.csv")
