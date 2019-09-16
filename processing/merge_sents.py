@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import OneHotEncoder
 import ast
 
-sents = pd.read_csv('/users/aschams/scratch/full_review_sentiments2.csv')
+sents = pd.read_csv('/users/aschams/scratch/full_review_sentiments.csv')
 numbered_reviews = pd.read_csv("/users/aschams/scratch/Complete_numbered_reviews2.csv")
 
 sent_numbered_reviews = numbered_reviews.merge(sents, on = 'review_id')

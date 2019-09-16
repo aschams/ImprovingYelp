@@ -9,12 +9,12 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
 analyser = SentimentIntensityAnalyzer()
 
-reviews = pd.read_csv("/users/aschams/scratch/Complete_numbered_reviews2.csv")
+reviews = pd.read_csv("/users/aschams/scratch/Complete_numbered_reviews.csv")
 reviews_head = reviews.head()
 
 sents = pd.DataFrame(reviews['review_id'])
 sents['Sentiment'] = reviews['text'].apply(lambda x: analyser.polarity_scores(x))
 
-# sents = pd.concat([sents, sents['Sentiment'].map(eval).apply(pd.Series)], axis = 1)
+sents = pd.concat([sents, sents['Sentiment'].map(eval).apply(pd.Series)], axis = 1)
 
-# sents.to_csv("/users/aschams/scratch/full_review_sentiments.csv")
+sents.to_csv("/users/aschams/scratch/full_review_sentiments.csv")
