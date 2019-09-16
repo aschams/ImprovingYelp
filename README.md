@@ -9,12 +9,17 @@ There are two purposes to this project.
 
 Data is from [Yelp Dataset Challenge](https://www.yelp.com/dataset/challenge)
 
-Data Cleaning found in DataCleaning.ipynb. Individual steps found in processing folder.
+Data Cleaning found in DataCleaning.ipynb. .py files containing individual steps can be found in the processing folder.
 
 Data Cleaning Pipeline:
 
 number_reviews.py -> sent_analysis.py -> merge_sents.py -> to_dummy.py -> sparse_yelp_reviews
 
+### Methodology
+
+Preparing the data for analysis took a few steps. First was getting the sentiment scores for each review using VADER. The second was one-hot encoding all categorical variables. Finally, each text review was turned into a TF-IDF vector. All of these features were then used to predict user rating for given reviews using a variety of machine learning algorithms, including Naive Bayes, Support Vector Machines, logistic regression, and XGBoost. Only logistic regression and XGBoost are discussed in the paper, as they are the two best performing methods.
+
+Because of its interpretability and performance, logistic regression was then used to identify n-grams that were associated strongly with high ratings. Important bigrams turned out to not be informative, while important trigrams yielded some important information, including menu items.
 
 ### Results
 
@@ -23,3 +28,7 @@ With respect to purpose 1, this project was largely successful. It produced pred
 ![Confusion Matrix of Results](img/confusion_matrix.png)
 
 Full results can be found in the paper above.
+
+### To Improve
+
+This methodology could be most easily improved using data from the restaurants' menu. This data could be used in conjunction with the important trigrams to automatically identify menu items and remove uninformative trigrams. Yelp does have information on a restaurant's menu, but it is not part of the publicly available dataset. Yelp also does not allow scraping of their website. 
