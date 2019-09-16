@@ -1,0 +1,40 @@
+pos
+5.84704479732
+favorite restaurant
+2.60126623555
+highly recommend
+2.5247357415
+time vegas
+2.39449258
+favorite place
+2.23716504864
+mary bar
+2.05524896204
+food amazing
+1.68751842559
+food atmosphere
+1.68533451464
+place definitely
+1.56796580271
+service superb
+1.56575137856
+bellagio fountains
+1.55185298991
+sit patio
+1.46424835627
+watch bellagio
+1.44139357096
+water bellagio
+1.42031309231
+worth penny
+1.40710252578
+ami gabi
+1.34864087716
+place breakfast
+1.33192190259
+second visit
+1.32079273996
+vegas trips
+1.31930115832
+breakfast lunch
+1.31300468029
